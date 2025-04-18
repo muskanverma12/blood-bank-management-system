@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Bank Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul style="background:#c8e6c9; color:green; padding:10px; text-align:center;">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <header>
+        <h1>Welcome to Blood Bank</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/donor">Donor</a>
+        <a href="/request">Request Blood</a>
+        <a href="/about">About</a>
+    </nav>
+    <div class="container">
+        <h2>Save a Life. Donate Blood.</h2>
+        <p>This system helps manage donors and blood requests efficiently.</p>
+    </div>
+</body>
+</html>

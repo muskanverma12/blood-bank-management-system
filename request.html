@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Blood</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Blood Request Form</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/donor">Donor</a>
+        <a href="/request">Request Blood</a>
+        <a href="/about">About</a>
+    </nav>
+    <div class="container">
+        <form method="POST">
+            <label>Patient Name:</label>
+            <input type="text" name="patient_name" required>
+
+            <label>Required Blood Group:</label>
+            <select name="required_blood">
+                <option>A+</option>
+                <option>B+</option>
+                <option>AB+</option>
+                <option>O+</option>
+                <option>A-</option>
+                <option>B-</option>
+                <option>AB-</option>
+                <option>O-</option>
+            </select>
+
+            <label>Hospital Name:</label>
+            <input type="text" name="hospital" required>
+
+            <label>Contact Number:</label>
+            <input type="text" name="contact" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>
